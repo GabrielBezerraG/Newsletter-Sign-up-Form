@@ -10,7 +10,7 @@ export default function App() {
 
   return (
     <div className={styles.background}>
-      <div className={styles.container}>
+      <main className={styles.container}>
         {success
           ? <Success
             email={email}
@@ -23,7 +23,7 @@ export default function App() {
             setSuccess={setSuccess}
           />
         }
-      </div>
+      </main>
     </div>
   )
 }
