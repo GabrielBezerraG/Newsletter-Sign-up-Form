@@ -3,7 +3,7 @@ This is a solution to the [Newsletter sign-up form with success message challeng
 
 ## My Process
 - After a period of learning TypeScript, I decided to apply it to a small project.
-- Once again I styled my page with Sass, using some of its functionalities like mixins and variables.
+- Once again I styled the page with Sass, using some of its functionalities like mixins and variables.
 - I created an additional breakpoint to keep the layout responsive.
 
 ## 🔧 Built With
