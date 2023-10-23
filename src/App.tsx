@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import styles from './App.module.scss';
+import Homepage from 'components/Homepage';
+import Success from 'components/Success';
 
-function App() {
+export default function App() {
+
+  const [success, setSuccess] = useState<boolean>(false);
+  const [email, setEmail] = useState<string>('');
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={styles.background}>
+      <div className={styles.container}>
+        {success
+          ? <Success
+            email={email}
+            setEmail={setEmail}
+            setSuccess={setSuccess}
+          />
+          : <Homepage
+            email={email}
+            setEmail={setEmail}
+            setSuccess={setSuccess}
+          />
+        }
+      </div>
     </div>
-  );
+  )
 }
-
-export default App;

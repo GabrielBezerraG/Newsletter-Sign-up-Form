@@ -1,0 +1,40 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  &__labels {
+    margin-bottom: 0.65rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+
+    span {
+      color: $dark-orange;
+    }
+  }
+  
+  
+  &__input {
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+    border: 1px solid $grey;
+    padding: 1.1rem 1.4rem;
+    margin-bottom: 1.5rem;
+
+    &--error {
+      border-color: $dark-orange;
+      background-color: $orange-input;
+      color: $dark-orange;
+    }
+  }
+
+  button {
+    @include button;
+  }
+}

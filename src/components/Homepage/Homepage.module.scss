@@ -1,0 +1,36 @@
+@import '../../styles/variables';
+
+.homepage {
+
+  &__image {
+    background: url(../../assets/images/illustration-sign-up-mobile.svg) bottom / cover no-repeat;
+    width: 100%;
+    height: 284px;
+  }
+
+  &__content {
+    padding: 2.5rem 1.5rem;
+  }
+}
+
+@media screen and (min-width: $bp-mobile-lg) {
+  .homepage {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 1.5rem;
+
+    &__image {
+      background-image: url(../../assets/images/illustration-sign-up-desktop.svg);
+      height: 593px;
+      width: 400px;
+    }
+    
+    &__content {
+      width: 375px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0 2.5rem 0 1rem;
+    }
+  }
+}
